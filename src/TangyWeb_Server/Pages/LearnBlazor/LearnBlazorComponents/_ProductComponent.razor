@@ -1,4 +1,4 @@
-<div class="bg-light col-5 border m-1" @onclick="SelectProduct">
+<div class="bg-light col-5 border m-1" @onclick="(args)=>SelectProduct(args, Product.Name)">
     <h4 class="text-secondary">Product - @Product.Id</h4>
     <input type="checkbox" @onchange="FavouriteUpdate" /> Add to Favourite <br/>
     Name - @Product.Name <br>
@@ -33,8 +33,8 @@
             await OnFavouriteSelection.InvokeAsync((bool)e.Value);
     }
 
-    private async Task SelectProduct(MouseEventArgs e)
+    private async Task SelectProduct(MouseEventArgs e, string name)
     {
-        await OnProductSelection.InvokeAsync(Product.Name);
+        await OnProductSelection.InvokeAsync(name);
     }
 }

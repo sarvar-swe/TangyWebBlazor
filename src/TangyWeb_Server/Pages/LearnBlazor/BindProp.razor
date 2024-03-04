@@ -26,17 +26,17 @@ Product Properties:
 
 @code {
     private string selectedProp = "";
-    Tangy_Models.LearnBlazorModels.Demo_Product Product = new()
+    Demo_Product Product = new()
     {
         Id = 1,
         Name = "Rose Candle",
         IsActive = true,
         Price = 10.99,
-        ProductProps = new List<Tangy_Models.LearnBlazorModels.Demo_ProductProp>()
+        ProductProps = new List<Demo_ProductProp>()
         {
-            new Tangy_Models.LearnBlazorModels.Demo_ProductProp { Id = 1, Key = "Color", Value = "Black"},
-            new Tangy_Models.LearnBlazorModels.Demo_ProductProp { Id = 2, Key = "Flavor", Value = "Rose Jasmine"},
-            new Tangy_Models.LearnBlazorModels.Demo_ProductProp { Id = 3, Key = "Size", Value = "20oz"}
+            new Demo_ProductProp { Id = 1, Key = "Color", Value = "Black"},
+            new Demo_ProductProp { Id = 2, Key = "Flavor", Value = "Rose Jasmine"},
+            new Demo_ProductProp { Id = 3, Key = "Size", Value = "20oz"}
         }
     };
 }

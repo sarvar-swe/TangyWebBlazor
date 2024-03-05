@@ -7,6 +7,9 @@
         @foreach(var product in Products)
         {
             <_ProductComponent Product="product" OnFavouriteSelection="FavouriteCountUpdate" OnProductSelection="ProductUpdate">
+                <ChildContent>
+                    RF from Parent - #1 #2
+                </ChildContent>
             </_ProductComponent>
         }
     </div>

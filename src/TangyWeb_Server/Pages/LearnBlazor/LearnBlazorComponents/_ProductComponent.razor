@@ -1,7 +1,8 @@
 <div class="bg-light col-5 border m-1" @onclick="(args)=>SelectProduct(args, Product.Name)">
     <h4 class="text-secondary">Product - @Product.Id</h4>
     <input type="checkbox" @onchange="FavouriteUpdate" /> Add to Favourite <br/>
-    Name - @Product.Name <br>
+    Name - @Product.Name <br/>
+    @ChildContent <br/> 
     Show Properties: <input type="checkbox" @bind="@Product.IsActive">
     @if (@Product.IsActive)
     {
@@ -20,6 +21,9 @@
 
     [Parameter]
     public Demo_Product Product { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set ;}
 
     [Parameter]
     public EventCallback<bool> OnFavouriteSelection { get; set; }
